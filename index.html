@@ -20,7 +20,9 @@
     <div class="container text-black">
       <div class="row">
         <form class="col s12" id="reg-form" method="POST" action="send">
-          <h4 class="text-black">Insured</h4>
+          <!-- SECTION: Insured -->
+
+          <h6 class="text-black">1. Insured</h6>
           <div class="row">
             <div class="input-field col s6">
               <input
@@ -77,7 +79,32 @@
               <label for="telephone">Telephone</label>
             </div>
           </div>
-          <h4 class="policy text-black">Details of Accident</h4>
+          <!-- SECTION: Policy -->
+
+          <h6 class="policy text-black">2. Policy</h6>
+          <div class="row">
+            <div class="input-field col s6">
+              <input
+                type="text"
+                name="policyNumber"
+                class="validate"
+                required
+              />
+              <label for="policyNumber">Policy number</label>
+            </div>
+            <div class="input-field col s6">
+              <input
+                type="text"
+                name="policyOfInsurance"
+                class="validate"
+                required
+              />
+              <label for="policyOfInsurance">Policy of insurance</label>
+            </div>
+          </div>
+          <!-- SECTION: Details of accident -->
+
+          <h6 class="policy text-black">3. Details of accident</h6>
           <div class="row">
             <div class="input-field col s6">
               <input
@@ -100,7 +127,39 @@
               <label for="place">Place</label>
             </div>
           </div>
-          <h4 class="policy text-black">Signature</h4>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea
+                id="detailEvent"
+                name="detailEvent"
+                class="materialize-textarea"
+              >
+              </textarea>
+              <label for="detailEvent">Brief details of accident</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+              </select>
+              <label>Did Police take particulars?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="place" type="text" name="place" />
+              <label for="place">If so, from which Police Station?</label>
+            </div>
+          </div>
+
+          <!-- DETAILS OF PERSONAL INJURY -->
+          <h6 class="policy text-black">4. Details of personal injury</h6>
+          <!-- SECTION: Signature -->
+
+          <h6 class="policy text-black">5. Signature</h6>
           <div class="row">
             <div class="file-field input-field col s12">
               <div class="btn">
@@ -127,11 +186,6 @@
           </div>
         </form>
       </div>
-      <a
-        title="Login"
-        class="ngl btn-floating btn-large waves-effect waves-light red"
-        ><i class="material-icons">input</i></a
-      >
     </div>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -150,6 +204,10 @@
 
       $(document).ready(function() {
         $(".timepicker").timepicker();
+      });
+
+      $(document).ready(function() {
+        $("select").formSelect();
       });
     </script>
   </body>
