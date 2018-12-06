@@ -1,106 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body class="black">
-    <div class="container">
-        <div class="row">
-            <form class="col s12" id="reg-form" method="POST" action="send">
-                <h4 class="teal-text text-lighten-2">Insured</h4>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="firstName" name="firstName" type="text" class="validate" required>
-                        <label for="firstName">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="lastName" name="lastName" type="text" class="validate" required>
-                        <label for="lastName">Last Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="address" name="address" type="text" class="validate" required>
-                        <label for="address">Address</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="trade" name="trade" type="text" class="validate" required>
-                        <label for="trade">Trade or Business</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="telephone" name="telephone" type="text" class="validate" required>
-                        <label for="telephone">Telephone</label>
-                    </div>
-                </div>
-                <h4 class="policy teal-text text-lighten-2">Details of Accident</h4>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="date" type=text name="date" class="datepicker" required>
-                        <label for="date">Date</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="time" type="text" name="time" class="timepicker">
-                        <label for="time">Time</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="place" type="text" name="place">
-                        <label for="place">Place</label>
-                    </div>
-                </div>
-                <h4 class="policy teal-text text-lighten-2">Signature</h4>
-                <div class="row">
-                    <div class="file-field input-field col s12">
-                        <div class="btn">
-                            <span>File</span>
-                            <input type="file" name="inFile" multiple>
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" placeholder="Upload Signaure">
-                        </div>
-                    </div>
+  <body class="black">
+    <div class="container text-black">
+      <div class="row">
+        <form class="col s12" id="reg-form" method="POST" action="send">
+          <h4 class="text-black">Insured</h4>
+          <div class="row">
+            <div class="input-field col s6">
+              <input
+                id="firstName"
+                name="firstName"
+                type="text"
+                class="validate"
+                required
+              />
+              <label for="firstName">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                class="validate"
+                required
+              />
+              <label for="lastName">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input
+                id="address"
+                name="address"
+                type="text"
+                class="validate"
+                required
+              />
+              <label for="address">Address</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input
+                id="trade"
+                name="trade"
+                type="text"
+                class="validate"
+                required
+              />
+              <label for="trade">Trade or Business</label>
+            </div>
+            <div class="input-field col s6">
+              <input
+                id="telephone"
+                name="telephone"
+                type="text"
+                class="validate"
+                required
+              />
+              <label for="telephone">Telephone</label>
+            </div>
+          </div>
+          <h4 class="policy text-black">Details of Accident</h4>
+          <div class="row">
+            <div class="input-field col s6">
+              <input
+                id="date"
+                type="text"
+                name="date"
+                class="datepicker"
+                required
+              />
+              <label for="date">Date</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="time" type="text" name="time" class="timepicker" />
+              <label for="time">Time</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="place" type="text" name="place" />
+              <label for="place">Place</label>
+            </div>
+          </div>
+          <h4 class="policy text-black">Signature</h4>
+          <div class="row">
+            <div class="file-field input-field col s12">
+              <div class="btn">
+                <span>File</span> <input type="file" name="inFile" multiple />
+              </div>
+              <div class="file-path-wrapper">
+                <input
+                  class="file-path validate"
+                  type="text"
+                  placeholder="Upload Signaure"
+                />
+              </div>
+            </div>
 
-
-                    <div class="input-field col s12">
-                        <button class="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
-                            <i class="material-icons right">done</i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <a title="Login" class="ngl btn-floating btn-large waves-effect waves-light red"><i class="material-icons">input</i></a>
+            <div class="input-field col s12">
+              <button
+                class="btn btn-large btn-register waves-effect waves-light"
+                type="submit"
+                name="action"
+              >
+                Register <i class="material-icons right">done</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <a
+        title="Login"
+        class="ngl btn-floating btn-large waves-effect waves-light red"
+        ><i class="material-icons">input</i></a
+      >
     </div>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        var currYear = (new Date()).getFullYear();
+      var currYear = new Date().getFullYear();
 
-        $(document).ready(function () {
-            $(".datepicker").datepicker({
-                defaultDate: new Date(currYear - 5, 1, 31),
-                // setDefaultDate: new Date(2000,01,31),
-                maxDate: new Date(currYear - 5, 12, 31),
-                yearRange: [1928, currYear - 5],
-                format: "yyyy/mm/dd"
-            });
+      $(document).ready(function() {
+        $(".datepicker").datepicker({
+          defaultDate: new Date(currYear - 5, 1, 31),
+          // setDefaultDate: new Date(2000,01,31),
+          maxDate: new Date(currYear - 5, 12, 31),
+          yearRange: [1928, currYear - 5],
+          format: "yyyy/mm/dd"
         });
+      });
 
-        $(document).ready(function () {
-            $('.timepicker').timepicker();
-        });
+      $(document).ready(function() {
+        $(".timepicker").timepicker();
+      });
     </script>
-</body>
-
+  </body>
 </html>
