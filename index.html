@@ -2,213 +2,454 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-
-  <body class="black" >
-    <div class="container text-black">
+  <body>
+    <div class="container">
       <div class="row">
-        <form class="col s12" id="reg-form" method="POST" action="send">
-          <!-- SECTION: Insured -->
-
-          <h6 class="text-black">1. Insured</h6>
+        <div class="input-field col s6"><h3>Insured</h3></div>
+      </div>
+      <div class="row">
+        <form class="col s12">
           <div class="row">
-            <div class="input-field col s6">
-              <input
-                id="firstName"
-                name="firstName"
-                type="text"
-                class="validate"
-                required
-              />
-              <label for="firstName">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input
-                id="lastName"
-                name="lastName"
-                type="text"
-                class="validate"
-                required
-              />
-              <label for="lastName">Last Name</label>
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate" />
+              <label for="name">Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input
-                id="address"
-                name="address"
-                type="text"
-                class="validate"
-                required
-              />
+              <input id="address" type="text" class="validate" />
               <label for="address">Address</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s6">
-              <input
-                id="trade"
-                name="trade"
-                type="text"
-                class="validate"
-                required
-              />
+              <input id="trade" type="text" class="validate" />
               <label for="trade">Trade or Business</label>
             </div>
             <div class="input-field col s6">
-              <input
-                id="telephone"
-                name="telephone"
-                type="text"
-                class="validate"
-                required
-              />
+              <input id="telephone" type="text" class="validate" />
               <label for="telephone">Telephone</label>
             </div>
           </div>
-          <!-- SECTION: Policy -->
 
-          <h6 class="policy text-black">2. Policy</h6>
+          <!-- FORM SECTION 2 -->
+          <div class="row">
+            <div class="input-field col s12"><h3>Policy</h3></div>
+          </div>
+
           <div class="row">
             <div class="input-field col s6">
-              <input
-                type="text"
-                name="policyNumber"
-                class="validate"
-                required
-              />
-              <label for="policyNumber">Policy number</label>
+              <input id="policy" type="text" class="validate" />
+              <label for="policy">Policy number</label>
             </div>
             <div class="input-field col s6">
-              <input
-                type="text"
-                name="policyOfInsurance"
-                class="validate"
-                required
-              />
-              <label for="policyOfInsurance">Policy of insurance</label>
+              <input id="period" type="text" class="validate" />
+              <label for="period">Period of insurance</label>
             </div>
           </div>
-          <!-- SECTION: Details of accident -->
 
-          <h6 class="policy text-black">3. Details of accident</h6>
+          <!-- FORM SECTION 3 -->
+          <div class="row">
+            <div class="input-field col s12"><h3>Details of accident</h3></div>
+          </div>
+
           <div class="row">
             <div class="input-field col s6">
-              <input
-                id="date"
-                type="text"
-                name="date"
-                class="datepicker"
-                required
-              />
+              <input id="date" type="text" class="datepicker" />
               <label for="date">Date</label>
             </div>
             <div class="input-field col s6">
-              <input id="time" type="text" name="time" class="timepicker" />
+              <input id="time" type="text" class="timepicker" />
               <label for="time">Time</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="place" type="text" name="place" />
+              <input id="place" type="text" class="validate" />
               <label for="place">Place</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <textarea
-                id="detailEvent"
-                name="detailEvent"
+                id="textarea2"
                 class="materialize-textarea"
-              >
-              </textarea>
-              <label for="detailEvent">Brief details of accident</label>
+                data-length="1000"
+                data-position="bottom"
+                data-tooltip="I am a tooltip"
+              ></textarea>
+              <label for="textarea2">Breif details of what happened</label>
+              <p>
+                <strong>Note:</strong> Please provide relevant statements,
+                reports, etc, from victims, eye witnesses, Police, etc
+              </p>
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s4">
+            <div class="input-field col s6">
               <select>
                 <option value="" disabled selected>Choose your option</option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
               </select>
-              <label>Did Police take particulars?</label>
+              <label>Did the police take particulars?</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="place" type="text" name="place" />
-              <label for="place">If so, from which Police Station?</label>
-            </div>
-          </div>
-
-          <!-- DETAILS OF PERSONAL INJURY -->
-          <h6 class="policy text-black">4. Details of personal injury</h6>
-          <!-- SECTION: Signature -->
-
-          <h6 class="policy text-black">5. Signature</h6>
-          <div class="row">
-            <div class="file-field input-field col s12">
-              <div class="btn">
-                <span>File</span> <input type="file" name="inFile" multiple />
-              </div>
-              <div class="file-path-wrapper">
-                <input
-                  class="file-path validate"
-                  type="text"
-                  placeholder="Upload Signaure"
-                />
-              </div>
-            </div>
-
-            <div class="input-field col s12">
-              <button
-                class="btn btn-large btn-register waves-effect waves-light"
-                type="submit"
-                name="action"
+              <input id="policeStation" type="text" class="validate" />
+              <label for="policeStation"
+                >If so, from which Police Station</label
               >
-                Register <i class="material-icons right">done</i>
-              </button>
+            </div>
+          </div>
+
+          <!-- FORM SECTION 4 -->
+          <div class="row">
+            <div class="input-field col s12">
+              <h3>Details of personal injuries</h3>
+            </div>
+          </div>
+
+          <!-- FORM SECTION 4 A -->
+          <div class="row">
+            <div class="col s1">
+              <div class="row">
+                <div class="input-field col s12"><h6>a)</h6></div>
+              </div>
+            </div>
+            <div class="col s11">
+              <div class="row">
+                <div class="input-field col s12">
+                  <h6>Details of the person injured</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="personName" type="text" class="validate" />
+                  <label for="personName">Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s2">
+                  <input
+                    id="age"
+                    type="number"
+                    min="0"
+                    max="150"
+                    class="validate"
+                  />
+                  <label for="age">Age</label>
+                </div>
+                <div class="input-field col s10">
+                  <input id="occupation" type="text" class="validate" />
+                  <label for="occupation">Occupation</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="lengthOfEmployment" type="text" class="validate" />
+                  <label for="lengthOfEmployment"
+                    >Length of employment in present job</label
+                  >
+                </div>
+                <div class="input-field col s6">
+                  <input id="salary" type="text" class="validate" />
+                  <label for="salary">Current monthly salary</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea
+                    id="textarea2"
+                    class="materialize-textarea"
+                    data-length="1000"
+                  ></textarea>
+                  <label for="textarea2">Nature of injuries</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM SECTION 4 B -->
+          <div class="row">
+            <div class="col s1">
+              <div class="row">
+                <div class="input-field col s12"><h6>b)</h6></div>
+              </div>
+            </div>
+            <div class="col s11">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea
+                    id="textarea2"
+                    class="materialize-textarea"
+                    data-length="1000"
+                  ></textarea>
+                  <label for="textarea2">Nature of injuries</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM SECTION 4 C -->
+          <div class="row">
+            <div class="col s1">
+              <div class="row">
+                <div class="input-field col s12"><h6>c)</h6></div>
+              </div>
+            </div>
+            <div class="col s11">
+              <div class="row">
+                <div class="input-field col s12">
+                  <select>
+                    <option value="" disabled selected
+                      >Choose your option</option
+                    >
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                  </select>
+                  <label>Did the police take particulars?</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM SECTION 4 D -->
+          <div class="row">
+            <div class="col s1">
+              <div class="row">
+                <div class="input-field col s12"><h6>d)</h6></div>
+              </div>
+            </div>
+
+            <div class="col s11">
+              <div class="row">
+                <div class="col s1">
+                  <div class="input-field col s12"><h6>(i)</h6></div>
+                </div>
+
+                <div class="col s11">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <select>
+                        <option value="" disabled selected
+                          >Choose your option</option
+                        >
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                      </select>
+                      <label>Has any claim been made by you?</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s1">
+                  <div class="input-field col s12"><h6>(ii)</h6></div>
+                </div>
+
+                <div class="col s11">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="whatAmount" type="text" class="validate" />
+                      <label for="whatAmount"
+                        >If so, by whom and what amount?</label
+                      >
+                      <p>
+                        <strong>Note:</strong> Any correspondence must be
+                        forwarded immediately to Sacos
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM SECTION 4 E -->
+          <div class="row">
+            <div class="col s1">
+              <div class="row">
+                <div class="input-field col s12"><h6>e)</h6></div>
+              </div>
+            </div>
+            <div class="col s11">
+              <div class="row">
+                <div class="input-field col s6">
+                  <select>
+                    <option value="" disabled selected
+                      >Choose your option</option
+                    >
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                  </select>
+                  <label>Has employee resumed work?</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input
+                    id="whenEmployeeResume"
+                    type="text"
+                    class="datepicker"
+                  />
+                  <label for="whenEmployeeResume">Date</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM SECTION 4 F -->
+          <div class="row">
+            <div class="col s1">
+              <div class="row">
+                <div class="input-field col s12"><h6>f)</h6></div>
+              </div>
+            </div>
+            <div class="col s11">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="admitLiable" type="text" class="validate" />
+                  <label for="admitLiable"
+                    >Have you in any way admitted liability?</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM SECTION 4 G -->
+          <div class="row">
+            <div class="col s1">
+              <div class="row">
+                <div class="input-field col s12"><h6>g)</h6></div>
+              </div>
+            </div>
+            <div class="col s11">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="negligent" type="text" class="validate" />
+                  <label for="negligent"
+                    >In your opinion, who was negligent?</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FORM SECTION 4 H -->
+          <div class="row">
+            <div class="col s1">
+              <div class="row">
+                <div class="input-field col s12"><h6>h)</h6></div>
+              </div>
+            </div>
+
+            <div class="col s11">
+              <div class="row">
+                <div class="col s1">
+                  <div class="input-field col s12"><h6>(i)</h6></div>
+                </div>
+
+                <div class="col s11">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="witness1" type="text" class="validate" />
+                      <label for="witness1"
+                        >Give the name and address of witness 1</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s1">
+                  <div class="input-field col s12"><h6>(ii)</h6></div>
+                </div>
+
+                <div class="col s11">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="witness2" type="text" class="validate" />
+                      <label for="witness2"
+                        >Give the name and address of witness 2</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s1">
+                  <div class="input-field col s12"><h6>(iii)</h6></div>
+                </div>
+
+                <div class="col s11">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="witness3" type="text" class="validate" />
+                      <label for="witness3"
+                        >Give the name and address of witness 3</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <p>
+                    <strong>Note:</strong> Please attach statements from
+                    witnesses
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </form>
       </div>
     </div>
-    <!-- SECTION: Javascript -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- SCRIPT -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
       var currYear = new Date().getFullYear();
-
       $(document).ready(function() {
         $(".datepicker").datepicker({
-          defaultDate: new Date(currYear - 5, 1, 31),
+          defaultDate: new Date(currYear - 2, 1, 31),
           // setDefaultDate: new Date(2000,01,31),
-          maxDate: new Date(currYear - 5, 12, 31),
-          yearRange: [1928, currYear - 5],
+          maxDate: new Date(currYear, 12, 31),
+          yearRange: [1928, currYear],
           format: "yyyy/mm/dd"
         });
       });
-
       $(document).ready(function() {
         $(".timepicker").timepicker();
       });
-
       $(document).ready(function() {
         $("select").formSelect();
+      });
+      $(document).ready(function() {
+        M.updateTextFields();
+      });
+      $(document).ready(function() {
+        $("input#input_text, textarea#textarea2").characterCounter();
+      });
+      $(document).ready(function() {
+        $(".tooltipped").tooltip();
       });
     </script>
   </body>
